@@ -38,6 +38,34 @@
               {{ movie.Language }}
             </BBadge>
           </div>
+          <table class="table small">
+            <tbody>
+              <tr>
+                <th>Production</th>
+                <td>{{movie.Production}}</td>
+              </tr>
+              <tr>
+                <th>Country</th>
+                <td>{{movie.Country}}</td>
+              </tr>
+              <tr>
+                <th>Director</th>
+                <td>{{movie.Director}}</td>
+              </tr>
+              <tr>
+                <th>Writer</th>
+                <td>{{movie.Writer}}</td>
+              </tr>
+              <tr>
+                <th>Actors</th>
+                <td>{{movie.Actors}}</td>
+              </tr>
+              <tr>
+                <th>Awards</th>
+                <td>{{movie.Awards}}</td>
+              </tr>
+            </tbody>
+          </table>
         </BCol>
       </BRow>
     </div>
@@ -69,7 +97,7 @@ export default {
   },
   methods: {
     closeModal() {
-      console.log("close");
+      this.$emit("closeModal")
     },
   },
 };
@@ -140,5 +168,9 @@ export default {
 .movie-description {
   font-size: 1.25rem;
   font-weight: 300;
+}
+.close-icon{
+  font-size: 24px;
+  cursor: pointer;
 }
 </style>
